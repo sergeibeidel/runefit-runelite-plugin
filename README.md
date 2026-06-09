@@ -15,6 +15,37 @@ The plugin sends data only after you click the button. It does not store RuneFit
 
 RuneLite linking is practical evidence that someone accessed a character. It is not cryptographic proof of account ownership because RuneLite and Plugin Hub plugins are open source and client requests can be reproduced.
 
+## Installing Before Plugin Hub Publication
+
+RuneLite does not support installing an unpublished plugin into the normal release client. Until RuneFit is accepted into the Plugin Hub, testers must run a separate RuneLite development client from this repository.
+
+Requirements:
+
+- Git
+- Java 11 or newer
+
+Windows PowerShell:
+
+```powershell
+git clone https://github.com/sergeibeidel/runefit-runelite-plugin.git
+cd runefit-runelite-plugin
+.\gradlew.bat run
+```
+
+macOS or Linux:
+
+```bash
+git clone https://github.com/sergeibeidel/runefit-runelite-plugin.git
+cd runefit-runelite-plugin
+./gradlew run
+```
+
+The command launches a separate development-mode RuneLite client with RuneFit already loaded. Do not download or copy unofficial plugin JAR files into RuneLite.
+
+If using a Jagex Account, follow RuneLite's [Using Jagex Accounts](https://github.com/runelite/runelite/wiki/Using-Jagex-Accounts) development-client instructions.
+
+The plugin currently defaults to a local RuneFit API. Testers must run RuneFit locally, or configure the plugin with the finalized production HTTPS API endpoint once it is available.
+
 ## Development
 
 Requirements:
